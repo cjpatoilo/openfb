@@ -6,7 +6,8 @@
 	"repository": "cjpatoilo/angular-openfb",
 	"license": "MIT",
 	"author": "CJ Patoilo <cjpatoilo@gmail.com>",
-  	"main": [
+  	"main": "dist/openfb.js",
+  	"files": [
   		"dist/openfb.js",
   		"dist/ngopenfb.js",
   		"dist/oauthcallback.html",
