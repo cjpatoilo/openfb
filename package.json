@@ -1,0 +1,53 @@
+{
+	"name": "angular-openfb",
+	"version": "0.0.0",
+	"description": "Facebook integration in JavaScript apps running in the browser and in Cordova.",
+	"homepage": "http://cjpatoilo.com/angular-openfb",
+	"repository": "cjpatoilo/angular-openfb",
+	"license": "MIT",
+	"author": "CJ Patoilo <cjpatoilo@gmail.com>",
+	"keywords": [
+		"🐥",
+		"angular",
+		"ng",
+		"automation",
+		"bower",
+		"dependency",
+		"dependencies",
+		"frontend",
+		"javascript",
+		"js",
+		"npm",
+		"package",
+		"package manager",
+		"production",
+		"vendor",
+		"vendors",
+		"web",
+		"website"
+	],
+	"ignore": [
+		".appveyor.yml",
+		".editorconfig",
+		".github",
+		".gitignore",
+		".travis.yml"
+	],
+	"dependencies": {
+	},
+	"devDependencies": {
+		"ava": "^0.17.0",
+		"editorconfig-tools": "^0.1.1",
+		"eslint": "^3.12.1",
+		"eslint-config-styled": "^0.0.0",
+		"husky": "^0.12.0",
+		"nyc": "^10.0.0"
+	},
+	"engines": {
+		"node": ">=4"
+	},
+	"scripts": {
+		"precommit": "npm t",
+		"test": "nyc ava && eslint . -c styled --ignore-path .gitignore && editorconfig-tools check ."
+	}
+}

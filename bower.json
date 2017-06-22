@@ -1,0 +1,40 @@
+{
+	"name": "angular-openfb",
+	"version": "0.0.0",
+	"description": "Facebook integration in JavaScript apps running in the browser and in Cordova.",
+	"homepage": "http://cjpatoilo.com/angular-openfb",
+	"repository": "cjpatoilo/angular-openfb",
+	"license": "MIT",
+	"author": "CJ Patoilo <cjpatoilo@gmail.com>",
+  	"main": [
+  		"openfb.js",
+  		"ngopenfb.js"
+  	],
+	"keywords": [
+		"🐥",
+		"angular",
+		"ng",
+		"automation",
+		"bower",
+		"dependency",
+		"dependencies",
+		"frontend",
+		"javascript",
+		"js",
+		"npm",
+		"package",
+		"package manager",
+		"production",
+		"vendor",
+		"vendors",
+		"web",
+		"website"
+	],
+	"ignore": [
+		".appveyor.yml",
+		".editorconfig",
+		".github",
+		".gitignore",
+		".travis.yml"
+	]
+}
