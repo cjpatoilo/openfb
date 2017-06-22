@@ -3,8 +3,8 @@
 > Facebook integration in JavaScript apps running in the browser and in Cordova.
 
 [![Travis Status](https://travis-ci.org/cjpatoilo/angular-openfb.svg?branch=master)](https://travis-ci.org/cjpatoilo/angular-openfb?branch=master)
-[![AppVeyor Status](https://ci.appveyor.com/api/projects/status/cw249ount3qs2hou?svg=true)](https://ci.appveyor.com/project/cjpatoilo/angular-openfb)
-[![Codacy Status](https://img.shields.io/codacy/grade/e9961d836078409c910329b9ac337994/master.svg)](https://www.codacy.com/app/cjpatoilo/angular-openfb/dashboard)
+[![AppVeyor Status](https://ci.appveyor.com/api/projects/status/4d9h0ob6rp0vqbw6?svg=true)](https://ci.appveyor.com/project/cjpatoilo/angular-openfb)
+[![Codacy Status](https://img.shields.io/codacy/grade/c62da5558350451dacdc905e18788fcd/master.svg)](https://www.codacy.com/app/cjpatoilo/angular-openfb/dashboard)
 [![Dependencies Status](https://david-dm.org/cjpatoilo/angular-openfb.svg)](https://david-dm.org/cjpatoilo/angular-openfb)
 [![Version Status](https://badge.fury.io/js/angular-openfb.svg)](https://www.npmjs.com/package/angular-openfb)
 [![Download Status](https://img.shields.io/npm/dt/angular-openfb.svg)](https://www.npmjs.com/package/angular-openfb)
