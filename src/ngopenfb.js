@@ -3,9 +3,9 @@
  * Allows you to use OpenFB "the Angular way":
  *  - As an Angular service instead of a global object
  *  - Using promises instead of callbacks
- * @author CJ Patoilo @cjpatoilo
- * @version 0.5
+ * Copyright © 2017 CJ Patoilo <cjpatoilo@gmail.com>
  */
+
 angular
 	.module('ngOpenFB', [])
 

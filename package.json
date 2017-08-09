@@ -6,13 +6,13 @@
 	"repository": "cjpatoilo/angular-openfb",
 	"license": "MIT",
 	"author": "CJ Patoilo <cjpatoilo@gmail.com>",
-  	"main": "dist/openfb.js",
-  	"files": [
-  		"dist/openfb.js",
-  		"dist/ngopenfb.js",
-  		"dist/oauthcallback.html",
-  		"dist/logoutcallback.html"
-  	],
+	"main": "dist/openfb.js",
+	"files": [
+		"dist/openfb.js",
+		"dist/ngopenfb.js",
+		"dist/oauthcallback.html",
+		"dist/logoutcallback.html"
+	],
 	"keywords": [
 		"🐥",
 		"angular",
@@ -41,8 +41,7 @@
 		".gitignore",
 		".travis.yml"
 	],
-	"dependencies": {
-	},
+	"dependencies": {},
 	"devDependencies": {
 		"ava": "^0.17.0",
 		"editorconfig-tools": "^0.1.1",

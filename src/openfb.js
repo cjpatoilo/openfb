@@ -5,6 +5,7 @@
 * Cordova, you also don't need the Facebook Cordova plugin. There is also no dependency on jQuery.
 * OpenFB allows you to login to Facebook and execute any Facebook Graph API request.
 */
+
 var openFB = (() => {
 	var loginURL = 'https://www.facebook.com/dialog/oauth'
 	var logoutURL = 'https://www.facebook.com/logout.php'
@@ -17,7 +18,7 @@ var openFB = (() => {
 
 	var context = window.location.pathname.substring(0, window.location.pathname.lastIndexOf('/'))
 
-	var baseURL = location.protocol + '//' + location.hostname + (location.port ? ':' + location.port : '') + context
+	var baseURL = window.location.protocol + '//' + window.location.hostname + (window.location.port ? ':' + window.location.port : '') + context
 
 	// Default OAuth redirect URL. Can be overriden in init()
 	var oauthRedirectURL = baseURL + '/oauthcallback.html'
