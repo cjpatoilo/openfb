@@ -15,9 +15,19 @@
 
 ## Why it's awesome
 
-Facebook integration in JavaScript apps running in the browser and in Cordova.
+Angular wrapper for the OpenFB library allows you to use OpenFB "the Angular way":
 
-*NOTE: For now only works in newer browsers.*
+- As an Angular service instead of a global object
+- Using promises instead of callbacks
+
+About OpenFB:
+
+- OpenFB is a micro-library that lets you integrate your JavaScript application with Facebook.
+- OpenFB works for both BROWSER-BASED apps and CORDOVA apps.
+- This library has no dependency: You don't need (and shouldn't use) the Facebook SDK with this library.
+- Whe running in Cordova, you also don't need the Facebook Cordova plugin.
+- There is also no dependency on jQuery.
+- OpenFB allows you to login to Facebook and execute any Facebook Graph API request.
 
 
 ## Getting Started
@@ -26,6 +36,12 @@ Facebook integration in JavaScript apps running in the browser and in Cordova.
 
 ```
 $ npm install angular-openfb
+```
+
+**Install with Yarn**
+
+```
+$ npm add angular-openfb
 ```
 
 **Install with Bower**

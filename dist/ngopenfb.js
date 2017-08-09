@@ -1,5 +1,5 @@
 /*!
- * Angular-openfb v0.0.2
+ * Angular-openfb v0.0.3
  * http://cjpatoilo.com/angular-openfb
  *
  * Copyright (c) 2017 CJ Patoilo
@@ -7,14 +7,6 @@
  */
 
 'use strict';
-
-/**
- * Angular wrapper for the OpenFB library
- * Allows you to use OpenFB "the Angular way":
- *  - As an Angular service instead of a global object
- *  - Using promises instead of callbacks
- * Copyright © 2017 CJ Patoilo <cjpatoilo@gmail.com>
- */
 
 angular.module('ngOpenFB', []).factory('ngFB', function ($q, $window) {
 	function init(params) {

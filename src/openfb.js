@@ -1,11 +1,3 @@
-/**
-* OpenFB is a micro-library that lets you integrate your JavaScript application with Facebook.
-* OpenFB works for both BROWSER-BASED apps and CORDOVA apps.
-* This library has no dependency: You don't need (and shouldn't use) the Facebook SDK with this library. Whe running in
-* Cordova, you also don't need the Facebook Cordova plugin. There is also no dependency on jQuery.
-* OpenFB allows you to login to Facebook and execute any Facebook Graph API request.
-*/
-
 var openFB = (() => {
 	var loginURL = 'https://www.facebook.com/dialog/oauth'
 	var logoutURL = 'https://www.facebook.com/logout.php'
@@ -42,7 +34,7 @@ var openFB = (() => {
 	// MAKE SURE YOU INCLUDE <script src="cordova.js"></script> IN YOUR index.html, OTHERWISE runningInCordova will always by false.
 	// You don't need to (and should not) add the actual cordova.js file to your file system: it will be added automatically
 	// by the Cordova build process
-	document.addEventListener('deviceready', () => runningInCordova = true, false)
+	document.addEventListener('deviceready', () => { runningInCordova = true }, false)
 
 	/**
 	* Initialize the OpenFB module. You must use this function and initialize the module with an appId before you can
@@ -59,11 +51,11 @@ var openFB = (() => {
 	*/
 	function init (params) {
 		if (params.appId) fbAppId = params.appId
-		else throw 'appId parameter not set in init()'
+		else throw new Error('appId parameter not set in init()')
 
 		if (params.tokenStore) tokenStore = params.tokenStore
 
-		if (params.accessToken)  tokenStore.fbAccessToken = params.accessToken
+		if (params.accessToken) tokenStore.fbAccessToken = params.accessToken
 
 		loginURL = params.loginURL || loginURL
 		logoutURL = params.logoutURL || logoutURL
@@ -82,9 +74,8 @@ var openFB = (() => {
 
 		if (token) {
 			loginStatus.status = 'connected'
-			loginStatus.authResponse = {accessToken: token}
-		}
-		else loginStatus.status = 'unknown'
+			loginStatus.authResponse = { accessToken: token }
+		} else loginStatus.status = 'unknown'
 
 		if (callback) callback(loginStatus)
 	}
@@ -107,7 +98,7 @@ var openFB = (() => {
 		if (!fbAppId) return callback({status: 'unknown', error: 'Facebook App Id not set.'})
 
 		// Inappbrowser load start handler: Used when running in Cordova only
-		function loginWindow_loadStartHandler(event) {
+		function loginWindowLoadStartHandler (event) {
 			var url = event.url
 			if (url.indexOf('access_token=') > 0 || url.indexOf('error=') > 0) {
 				// When we get the access token fast, the login window (inappbrowser) is still opening with animation
@@ -118,13 +109,17 @@ var openFB = (() => {
 			}
 		}
 
+		function loginWindowLoadStopHandler () {
+			console.log('stop listeners')
+		}
+
 		// Inappbrowser exit handler: Used when running in Cordova only
-		function loginWindow_exitHandler () {
+		function loginWindowExitHandler () {
 			console.log('exit and remove listeners')
 			// Handle the situation where the user closes the login window manually before completing the login process
 			if (loginCallback && !loginProcessed) loginCallback({status: 'user_cancelled'})
-			loginWindow.removeEventListener('loadstop', loginWindow_loadStopHandler)
-			loginWindow.removeEventListener('exit', loginWindow_exitHandler)
+			loginWindow.removeEventListener('loadstop', loginWindowLoadStopHandler)
+			loginWindow.removeEventListener('exit', loginWindowExitHandler)
 			loginWindow = null
 			console.log('done removing listeners')
 		}
@@ -140,8 +135,8 @@ var openFB = (() => {
 
 		// If the app is running in Cordova, listen to URL changes in the InAppBrowser until we get a URL with an access_token or an error
 		if (runningInCordova) {
-			loginWindow.addEventListener('loadstart', loginWindow_loadStartHandler)
-			loginWindow.addEventListener('exit', loginWindow_exitHandler)
+			loginWindow.addEventListener('loadstart', loginWindowLoadStartHandler)
+			loginWindow.addEventListener('exit', loginWindowExitHandler)
 		}
 		// Note: if the app is running in the browser the loginWindow dialog will call back by invoking the
 		// oauthCallback() function. See oauthcallback.html for details.
@@ -164,13 +159,11 @@ var openFB = (() => {
 			options = parseQueryString(queryString)
 			tokenStore.fbAccessToken = options['access_token']
 			if (loginCallback) loginCallback({status: 'connected', authResponse: {accessToken: options['access_token']}})
-		}
-		else if (url.indexOf("error=") > 0) {
+		} else if (url.indexOf('error=') > 0) {
 			queryString = url.substring(url.indexOf('?') + 1, url.indexOf('#'))
 			options = parseQueryString(queryString)
 			if (loginCallback) loginCallback({status: 'not_authorized', error: options.error})
-		}
-		else {
+		} else {
 			if (loginCallback) loginCallback({status: 'not_authorized'})
 		}
 	}
@@ -207,7 +200,7 @@ var openFB = (() => {
 	function api (options) {
 		var method = options.method || 'GET'
 		var params = options.params || {}
-		var xhr = new XMLHttpRequest()
+		var xhr = new window.XMLHttpRequest()
 		var url
 
 		params['access_token'] = tokenStore.fbAccessToken
@@ -263,7 +256,7 @@ var openFB = (() => {
 	function toQueryString (options) {
 		var parts = []
 		for (var i in options) {
-			if (options.hasOwnProperty(i)) parts.push(encodeURIComponent(i) + "=" + encodeURIComponent(options[i]))
+			if (options.hasOwnProperty(i)) parts.push(encodeURIComponent(i) + '=' + encodeURIComponent(options[i]))
 		}
 
 		return parts.join('&')
