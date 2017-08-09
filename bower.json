@@ -1,6 +1,6 @@
 {
-	"name": "angular-openfb",
-	"version": "0.0.1",
+	"name": "ngopenfb",
+	"version": "0.0.5",
 	"description": "Facebook integration in JavaScript apps running in the browser and in Cordova.",
 	"homepage": "http://cjpatoilo.com/angular-openfb",
 	"repository": "cjpatoilo/angular-openfb",
