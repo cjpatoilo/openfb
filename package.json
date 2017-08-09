@@ -44,17 +44,33 @@
 	"dependencies": {},
 	"devDependencies": {
 		"ava": "^0.17.0",
+		"babel-cli": "^6.24.1",
+		"babel-preset-es2015": "^6.24.1",
+		"babel-preset-stage-0": "^6.24.1",
+		"banner-cli": "^0.11.0",
+		"copycopy": "0.0.2",
 		"editorconfig-tools": "^0.1.1",
 		"eslint": "^3.12.1",
 		"eslint-config-styled": "^0.0.0",
 		"husky": "^0.12.0",
-		"nyc": "^10.0.0"
+		"npm-run-all": "^4.0.2",
+		"nyc": "^10.0.0",
+		"onchange": "^3.2.1",
+		"rimraf": "^2.6.1",
+		"uglify-js": "^3.0.27"
 	},
 	"engines": {
 		"node": ">=4"
 	},
 	"scripts": {
+		"start": "run-s build watch",
+		"build": "run-s clean build:script build:html banner",
+		"build:script": "babel src --out-dir dist --presets es2015 && uglifyjs dist/openfb.js -o dist/openfb.min.js -c -m && uglifyjs dist/ngopenfb.js -o dist/ngopenfb.min.js -c -m",
+		"build:html": "copycopy src/**/*.html dist",
+		"watch": "onchange src -- run-p build",
+		"clean": "rimraf dist",
+		"banner": "banner-cli dist/**/*.js",
 		"precommit": "npm t",
-		"test": "nyc ava && eslint . -c styled --ignore-path .gitignore && editorconfig-tools check ."
+		"test": "nyc ava && eslint . -c styled --ignore-path .gitignore --ignore-path dist/*.js && editorconfig-tools check ."
 	}
 }

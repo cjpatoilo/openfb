@@ -1,5 +1,7 @@
 # ngOpenFB
 
+<a align="center" href="http://cjpatoilo.com/angular-openfb"><img width="100%" src="http://cjpatoilo.com/angular-openfb/thumbnail.png" alt="Facebook integration in JavaScript apps running in the browser and in Cordova."></a>
+
 > Facebook integration in JavaScript apps running in the browser and in Cordova.
 
 [![Travis Status](https://travis-ci.org/cjpatoilo/angular-openfb.svg?branch=master)](https://travis-ci.org/cjpatoilo/angular-openfb?branch=master)
