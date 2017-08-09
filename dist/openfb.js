@@ -1,5 +1,5 @@
 /*!
- * Angular-openfb v0.0.3
+ * ngOpenFB v0.0.4
  * http://cjpatoilo.com/angular-openfb
  *
  * Copyright (c) 2017 CJ Patoilo
