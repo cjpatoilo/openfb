@@ -1,6 +1,6 @@
 {
   "name": "openfb",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "Facebook integration in JavaScript apps running in the browser and in Cordova.",
   "homepage": "https://cjpatoilo.com/openfb",
   "repository": "cjpatoilo/openfb",
