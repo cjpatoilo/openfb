@@ -34,14 +34,34 @@ $ npm add openfb
 $ bower install openfb
 ```
 
+## Usage
+
+First step, create a Facebook App:
+
+1. Access https://developers.facebook.com/apps, and in "My Apps" Tab click `Create App`
+1. Define a unique name for your app and click `Create App ID`
+
+Second step, create Facebook Login:
+
+1. Click `Set Up` of the "Facebook Login" section
+1. Now click on the "Settings" of the "Facebook Login" tab in the sidebar navigation
+1. On the "Client OAuth Settings", add the following URLs in the "Valid OAuth Redirect URIs" field:
+
+ - http://localhost:8100/oauthcallback.html (for access using ionic serve)
+ - https://www.facebook.com/connect/login_success.html (for access from Cordova)
+
+1. Click Save Changes
+
 ## Features
 
-- OpenFB is a micro-library that lets you integrate your JavaScript application with Facebook.
-- OpenFB works for both BROWSER-BASED apps and CORDOVA apps.
-- This library has no dependency: You don't need (and shouldn't use) the Facebook SDK with this library.
-- Whe running in Cordova, you also don't need the Facebook Cordova plugin.
-- There is also no dependency on jQuery.
-- OpenFB allows you to login to Facebook and execute any Facebook Graph API request.
+- Integrate your JavaScript application with Facebook.
+- Works for both BROWSER-BASED apps and CORDOVA apps.
+- Login to Facebook.
+- Run any Facebook Graph API request.
+- No dependency.
+- No Facebook SDK.
+- No Facebook Cordova plugin.
+- No jQuery.
 
 ## Contributing
 
