@@ -1,76 +1,86 @@
 {
-	"name": "ngopenfb",
-	"version": "0.0.5",
-	"description": "Facebook integration in JavaScript apps running in the browser and in Cordova.",
-	"homepage": "http://cjpatoilo.com/angular-openfb",
-	"repository": "cjpatoilo/angular-openfb",
-	"license": "MIT",
-	"author": "CJ Patoilo <cjpatoilo@gmail.com>",
-	"main": "dist/openfb.js",
-	"files": [
-		"dist/openfb.js",
-		"dist/ngopenfb.js",
-		"dist/oauthcallback.html",
-		"dist/logoutcallback.html"
-	],
-	"keywords": [
-		"🐥",
-		"angular",
-		"angularjs",
-		"ng",
-		"auth",
-		"authenticate",
-		"authentication",
-		"bower",
-		"cordova",
-		"javascript",
-		"js",
-		"ionic",
-		"module",
-		"npm",
-		"package",
-		"phonegap",
-		"vendor",
-		"web",
-		"website"
-	],
-	"ignore": [
-		".appveyor.yml",
-		".editorconfig",
-		".github",
-		".gitignore",
-		".travis.yml"
-	],
-	"dependencies": {},
-	"devDependencies": {
-		"ava": "^0.17.0",
-		"babel-cli": "^6.24.1",
-		"babel-preset-es2015": "^6.24.1",
-		"babel-preset-stage-0": "^6.24.1",
-		"banner-cli": "^0.11.0",
-		"copycopy": "0.0.2",
-		"editorconfig-tools": "^0.1.1",
-		"eslint": "^3.12.1",
-		"eslint-config-styled": "^0.0.2",
-		"husky": "^0.12.0",
-		"npm-run-all": "^4.0.2",
-		"nyc": "^10.0.0",
-		"onchange": "^3.2.1",
-		"rimraf": "^2.6.1",
-		"uglify-js": "^3.0.27"
-	},
-	"engines": {
-		"node": ">=4"
-	},
-	"scripts": {
-		"start": "run-s build watch",
-		"build": "run-s clean build:script build:html banner",
-		"build:script": "babel src --out-dir dist --presets es2015 && uglifyjs dist/openfb.js -o dist/openfb.min.js -c -m && uglifyjs dist/ngopenfb.js -o dist/ngopenfb.min.js -c -m",
-		"build:html": "copycopy src/**/*.html dist",
-		"watch": "onchange src -- run-p build",
-		"clean": "rimraf dist",
-		"banner": "banner-cli dist/**/*.js",
-		"precommit": "npm t",
-		"test": "nyc ava && eslint src -c styled --ignore-path .gitignore && editorconfig-tools check ."
-	}
+  "name": "openfb",
+  "version": "0.0.1",
+  "description": "Facebook integration in JavaScript apps running in the browser and in Cordova.",
+  "homepage": "https://cjpatoilo.com/openfb",
+  "repository": "cjpatoilo/openfb",
+  "license": "MIT",
+  "author": "CJ Patoilo <cjpatoilo@gmail.com>",
+  "private": false,
+  "main": "openfb.js",
+  "files": [
+    "openfb.js",
+    "logoutcallback.html",
+    "oauthcallback.html"
+  ],
+  "keywords": [
+    "🐥",
+    "auth",
+    "authenticate",
+    "authentication",
+    "cordova",
+    "facebook",
+    "fb",
+    "login",
+    "oauth",
+    "openfb",
+    "webview"
+  ],
+  "ignore": [
+    ".appveyor.yml",
+    ".github",
+    ".gitignore",
+    ".travis.yml"
+  ],
+  "dependencies": {},
+  "devDependencies": {
+    "ava": "^2.4.0",
+    "babel-cli": "^6.24.1",
+    "babel-preset-env": "^1.7.0",
+    "banner-cli": "^0.14.1",
+    "boeing": "latest",
+    "husky": "^3.0.9",
+    "inject-ga": "^0.2.4",
+    "lint-staged": "^9.4.2",
+    "live-server": "^1.2.1",
+    "marshmallow": "latest",
+    "npm-run-all": "^4.0.2",
+    "nyc": "^14.1.1",
+    "onchange": "^6.1.0",
+    "prettier-standard": "^15.0.1",
+    "rimraf": "^3.0.0",
+    "uglify-js": "^3.0.27"
+  },
+  "scripts": {
+    "build": "babel index.js --out-file openfb.js && uglifyjs openfb.js -o openfb.min.js -c -m && banner-cli openfb.*",
+    "deploy": "marshmallow -o docs -i artwork.psd -f -m && inject-ga docs/index.html -o docs/index.html -c 'UA-24389952-13' && boeing docs && rimraf docs",
+    "lint": "prettier-standard --check",
+    "server": "live-server --entry-file=example.html --host=localhost --port=8100",
+    "start": "run-p build watch server",
+    "watch": "onchange src -- npm run build",
+    "test": "nyc ava"
+  },
+  "engines": {
+    "node": "^12.13.0"
+  },
+  "prettier": {
+    "jsxSingleQuote": false,
+    "trailingComma": "all"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "src/**/*": [
+      "prettier-standard --format",
+      "git add"
+    ]
+  },
+  "babel": {
+    "presets": [
+      "env"
+    ]
+  }
 }

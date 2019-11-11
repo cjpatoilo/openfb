@@ -1,44 +1,26 @@
 {
-	"name": "ngopenfb",
-	"version": "0.0.5",
-	"description": "Facebook integration in JavaScript apps running in the browser and in Cordova.",
-	"homepage": "http://cjpatoilo.com/angular-openfb",
-	"repository": "cjpatoilo/angular-openfb",
-	"license": "MIT",
-	"author": "CJ Patoilo <cjpatoilo@gmail.com>",
-  	"main": "dist/openfb.js",
-  	"files": [
-  		"dist/openfb.js",
-  		"dist/ngopenfb.js",
-  		"dist/oauthcallback.html",
-  		"dist/logoutcallback.html"
-  	],
-	"keywords": [
-		"🐥",
-		"angular",
-		"angularjs",
-		"ng",
-		"auth",
-		"authenticate",
-		"authentication",
-		"bower",
-		"cordova",
-		"javascript",
-		"js",
-		"ionic",
-		"module",
-		"npm",
-		"package",
-		"phonegap",
-		"vendor",
-		"web",
-		"website"
-	],
-	"ignore": [
-		".appveyor.yml",
-		".editorconfig",
-		".github",
-		".gitignore",
-		".travis.yml"
-	]
+  "name": "openfb",
+  "version": "0.0.1",
+  "description": "Facebook integration in JavaScript apps running in the browser and in Cordova.",
+  "homepage": "https://cjpatoilo.com/openfb",
+  "repository": "cjpatoilo/openfb",
+  "license": "MIT",
+  "author": "CJ Patoilo <cjpatoilo@gmail.com>",
+  "private": false,
+  "main": "openfb.js",
+  "files": ["openfb.js", "logoutcallback.html", "oauthcallback.html"],
+  "keywords": [
+    "🐥",
+    "auth",
+    "authenticate",
+    "authentication",
+    "cordova",
+    "facebook",
+    "fb",
+    "login",
+    "oauth",
+    "openfb",
+    "webview"
+  ],
+  "ignore": [".appveyor.yml", ".github", ".gitignore", ".travis.yml"]
 }
