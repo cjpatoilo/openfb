@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <title>ngOpenFB Sample</title>
+    <title>Angular OpenFB Sample</title>
     <meta
       name="viewport"
       content="initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui"
@@ -14,7 +14,7 @@
   </head>
   <body ng-app="sampleApp">
     <div class="container" ng-controller="MyController">
-      <h1>ngOpenFB</h1>
+      <h1>Angular OpenFB</h1>
       <p>
         Facebook integration in JavaScript apps running in the browser and in
         Cordova.
@@ -62,7 +62,7 @@
 
     <script>
       angular
-        .module('sampleApp', ['ngOpenFB'])
+        .module('sampleApp', ['angular-openfb'])
 
         .controller('MyController', ($scope, ngFB) => {
           // Defaults to sessionStorage for storing the Facebook token
