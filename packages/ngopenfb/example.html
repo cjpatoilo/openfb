@@ -57,8 +57,8 @@
     </div>
 
     <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.6.0/angular.js"></script>
-    <script src="./openfb.js"></script>
-    <script src="./ngopenfb.js"></script>
+    <script src="openfb.js"></script>
+    <script src="ngopenfb.js"></script>
 
     <script>
       angular
@@ -66,7 +66,7 @@
 
         .controller('MyController', ($scope, ngFB) => {
           // Defaults to sessionStorage for storing the Facebook token
-          ngFB.init({ appId: '421334851895483' })
+          ngFB.init({ appId: 'YOUR_FB_APP_ID' })
 
           //  Uncomment the line below to store the Facebook token in localStorage instead of sessionStorage
           //  openFB.init({appId: 'YOUR_FB_APP_ID', tokenStore: window.localStorage})

@@ -58,7 +58,7 @@
     "lint": "prettier-standard --check",
     "server": "live-server --entry-file=example.html --host=localhost --port=8100",
     "start": "run-p build watch server",
-    "watch": "onchange src -- npm run build",
+    "watch": "onchange index.js -- npm run build",
     "test": "nyc ava"
   },
   "engines": {
