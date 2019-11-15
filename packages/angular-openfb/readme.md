@@ -67,7 +67,8 @@ Second step, create Facebook Login:
 ## Packages
 
 - [Vanilla JavaScript](https://github.com/cjpatoilo/openfb)
-- [Angular.js](https://github.com/cjpatoilo/openfb/tree/master/packages/angular-openfb)
+- [Angular](https://github.com/cjpatoilo/openfb/tree/master/packages/angular-openfb)
+- [Angular.js](https://github.com/cjpatoilo/openfb/tree/master/packages/ngopenfb)
 
 ## Contributing
 
