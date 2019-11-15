@@ -1,4 +1,4 @@
-<a href="https://cjpatoilo.com/openfb"><img width="100%" src="https://repository-images.githubusercontent.com/95079283/9f5a5680-0331-11ea-8e74-3ad837a646a2" alt="Facebook integration in JavaScript apps running in the browser and in Cordova."></a>
+[![Facebook integration in JavaScript apps running in the browser and in Cordova.](https://repository-images.githubusercontent.com/95079283/9f5a5680-0331-11ea-8e74-3ad837a646a2)](https://github.com/cjpatoilo/openfb)
 
 > Facebook integration in JavaScript apps running in the browser and in Cordova.
 
@@ -51,6 +51,7 @@ Second step, create Facebook Login:
  - https://www.facebook.com/connect/login_success.html (for access from Cordova)
 
 1. Click Save Changes
+1. Now, the `App ID` is available
 
 ## Features
 
@@ -62,6 +63,11 @@ Second step, create Facebook Login:
 - No Facebook SDK.
 - No Facebook Cordova plugin.
 - No jQuery.
+
+## Packages
+
+- [Vanilla JavaScript](https://github.com/cjpatoilo/openfb)
+- [Angular.js](https://github.com/cjpatoilo/openfb/tree/master/packages/ngopenfb)
 
 ## Contributing
 
