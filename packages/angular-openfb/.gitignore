@@ -1,0 +1,8 @@
+*.log
+.DS_Store
+.nyc_output
+build
+dist
+node_modules
+!openfb.*
+angular-openfb.*
