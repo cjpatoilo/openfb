@@ -52,7 +52,7 @@
     "uglify-js": "^3.0.27"
   },
   "scripts": {
-    "build": "babel index.js --out-file openfb.js && uglifyjs openfb.js -o openfb.min.js -c -m && banner-cli openfb.*",
+    "build": "babel index.js --out-file openfb.js && uglifyjs openfb.js -o openfb.min.js -c -m && banner-cli openfb.js && banner-cli openfb.min.js",
     "deploy": "marshmallow -o docs -i artwork.psd -f -m && inject-ga docs/index.html -o docs/index.html -c 'UA-24389952-13' && boeing docs && rimraf docs",
     "lint": "prettier-standard --check",
     "server": "live-server --entry-file=example.html --host=localhost --port=8100",
