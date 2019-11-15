@@ -5,9 +5,9 @@
 [![Travis Status](https://travis-ci.org/cjpatoilo/openfb.svg?branch=master)](https://travis-ci.org/cjpatoilo/openfb?branch=master)
 [![AppVeyor Status](https://ci.appveyor.com/api/projects/status/12iw9j8dflj56h6n?svg=true)](https://ci.appveyor.com/project/cjpatoilo/openfb)
 [![Codacy Status](https://img.shields.io/codacy/grade/37430abefbc14c488ae768cd4e8f55fe/master.svg)](https://www.codacy.com/app/cjpatoilo/openfb/dashboard)
-[![Dependencies Status](https://david-dm.org/cjpatoilo/openfb.svg)](https://david-dm.org/cjpatoilo/openfb)
-[![Version Status](https://badge.fury.io/js/openfb.svg)](https://www.npmjs.com/package/openfb)
-[![Download Status](https://img.shields.io/npm/dt/openfb.svg)](https://www.npmjs.com/package/openfb)
+[![Dependencies Status](https://david-dm.org/cjpatoilo/ngopenfb.svg)](https://david-dm.org/cjpatoilo/ngopenfb)
+[![Version Status](https://badge.fury.io/js/ngopenfb.svg)](https://www.npmjs.com/package/ngopenfb)
+[![Download Status](https://img.shields.io/npm/dt/ngopenfb.svg)](https://www.npmjs.com/package/ngopenfb)
 [![Gitter Chat](https://img.shields.io/badge/gitter-join_the_chat-4cc61e.svg)](https://gitter.im/cjpatoilo/openfb)
 
 ## Why it's awesome
@@ -19,19 +19,19 @@ OpenFB is an easy way for Facebook integration in JavaScript apps. No dependency
 **Install with npm**
 
 ```
-$ npm install openfb
+$ npm install ngopenfb
 ```
 
 **Install with Yarn**
 
 ```
-$ npm add openfb
+$ npm add ngopenfb
 ```
 
 **Install with Bower**
 
 ```
-$ bower install openfb
+$ bower install ngopenfb
 ```
 
 ## Usage

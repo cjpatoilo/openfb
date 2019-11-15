@@ -1,0 +1,31 @@
+{
+  "name": "ngopenfb",
+  "version": "0.0.8",
+  "description": "Facebook integration in JavaScript apps running in the browser and in Cordova.",
+  "homepage": "https://cjpatoilo.com/openfb",
+  "repository": "cjpatoilo/openfb",
+  "license": "MIT",
+  "author": "CJ Patoilo <cjpatoilo@gmail.com>",
+  "private": false,
+  "main": "ngopenfb.js",
+  "files": [
+    "openfb.js",
+    "ngopenfb.js",
+    "logoutcallback.html",
+    "oauthcallback.html"
+  ],
+  "keywords": [
+    "🐥",
+    "auth",
+    "authenticate",
+    "authentication",
+    "cordova",
+    "facebook",
+    "fb",
+    "login",
+    "oauth",
+    "openfb",
+    "webview"
+  ],
+  "ignore": [".appveyor.yml", ".github", ".gitignore", ".travis.yml"]
+}
