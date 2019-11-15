@@ -1,0 +1,87 @@
+{
+  "name": "ngopenfb",
+  "version": "0.0.8",
+  "description": "Facebook integration in JavaScript apps running in the browser and in Cordova.",
+  "homepage": "https://cjpatoilo.com/openfb",
+  "repository": "cjpatoilo/openfb",
+  "license": "MIT",
+  "author": "CJ Patoilo <cjpatoilo@gmail.com>",
+  "private": false,
+  "main": "ngopenfb.js",
+  "files": [
+    "openfb.js",
+    "ngopenfb.js",
+    "oauthcallback.html",
+    "logoutcallback.html"
+  ],
+  "keywords": [
+    "🐥",
+    "auth",
+    "authenticate",
+    "authentication",
+    "cordova",
+    "facebook",
+    "fb",
+    "login",
+    "oauth",
+    "openfb",
+    "webview"
+  ],
+  "ignore": [
+    ".appveyor.yml",
+    ".github",
+    ".gitignore",
+    ".travis.yml"
+  ],
+  "dependencies": {
+    "openfb": "latest"
+  },
+  "devDependencies": {
+    "ava": "^2.4.0",
+    "babel-cli": "^6.24.1",
+    "babel-preset-env": "^1.7.0",
+    "banner-cli": "^0.14.1",
+    "husky": "^3.0.9",
+    "lint-staged": "^9.4.2",
+    "live-server": "^1.2.1",
+    "npm-run-all": "^4.0.2",
+    "nyc": "^14.1.1",
+    "onchange": "^6.1.0",
+    "prettier-standard": "^15.0.1",
+    "uglify-js": "^3.0.27"
+  },
+  "peerDependencies": {
+    "openfb": "latest"
+  },
+  "scripts": {
+    "build": "babel index.js --out-file ngopenfb.js && uglifyjs ngopenfb.js -o ngopenfb.min.js -c -m && banner-cli ngopenfb.js && banner-cli ngopenfb.min.js",
+    "lint": "prettier-standard --check",
+    "server": "live-server --entry-file=example.html --host=localhost --port=8100",
+    "start": "run-p build watch server",
+    "watch": "onchange src -- npm run build",
+    "test": "nyc ava"
+  },
+  "engines": {
+    "node": "^12.13.0"
+  },
+  "prettier": {
+    "jsxSingleQuote": false,
+    "trailingComma": "all"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "src/**/*": [
+      "prettier-standard --format",
+      "git add"
+    ]
+  },
+  "babel": {
+    "presets": [
+      "env"
+    ]
+  }
+}
