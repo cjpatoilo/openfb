@@ -25,7 +25,7 @@ $ npm install openfb
 **Install with Yarn**
 
 ```
-$ npm add openfb
+$ yarn add openfb
 ```
 
 **Install with Bower**
@@ -64,11 +64,11 @@ Second step, create Facebook Login:
 - No Facebook Cordova plugin.
 - No jQuery.
 
-## Packages
+## Extensions
 
-- [Vanilla JavaScript](https://github.com/cjpatoilo/openfb)
 - [Angular](https://github.com/cjpatoilo/openfb/tree/master/packages/angular-openfb)
 - [Angular.js](https://github.com/cjpatoilo/openfb/tree/master/packages/ngopenfb)
+- [Vanilla](https://github.com/cjpatoilo/openfb)
 
 ## Contributing
 
